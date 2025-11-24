@@ -391,13 +391,18 @@ Solution: Added custom X-Served-By headers to identify which server handled each
 Problem: Application would return 404 errors when accessed without trailing slash.  
 Solution: Configured nginx with proper `alias` directive and `try_files` to handle URL variations correctly.
 
+
+Link to web app: http://3.95.223.149/skill-analyzer/
+                 
+
  License
 
 This project is created for educational purposes as part of the ALU System Engineering & DevOps curriculum.
 
 Contact
 
-For questions or feedback, please contact: [Your Email]
+For questions or feedback, please contact: m.keira@alustudent.com
+
 
 ---
 
