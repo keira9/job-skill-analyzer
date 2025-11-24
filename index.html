@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Market Skill Gap Analyzer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎯 Job Market Skill Gap Analyzer</h1>
+            <p class="subtitle">Discover the skills you need to land your dream job</p>
+        </header>
+
+        <div class="main-content">
+            <div class="search-section">
+                <div class="input-group">
+                    <label for="jobTitle">Target Job Title / Keywords</label>
+                    <input type="text" id="jobTitle" placeholder="e.g., Software Engineer, Data Analyst, Product Manager">
+                </div>
+
+                <div class="input-group">
+                    <label for="currentSkills">Your Current Skills (comma-separated)</label>
+                    <textarea id="currentSkills" class="skills-input" placeholder="e.g., JavaScript, Python, React, SQL, Project Management, Communication"></textarea>
+                </div>
+
+                <div style="display: flex; gap: 15px; flex-wrap: wrap;">
+                    <button id="analyzeBtn">Analyze Skill Gap</button>
+                    <button id="clearBtn" style="background: linear-gradient(135deg, #6c757d 0%, #495057 100%);">Clear & Reset</button>
+                </div>
+            </div>
+
+            <div class="error" id="errorMsg"></div>
+
+            <div class="loading" id="loading">
+                <div class="spinner"></div>
+                <p>Analyzing job market data...</p>
+            </div>
+
+            <div class="results" id="results">
+                <div class="results-header">
+                    <h2>Analysis Results</h2>
+                    <div class="filter-sort">
+                        <select id="filterSkills">
+                            <option value="all">All Skills</option>
+                            <option value="missing">Missing Skills</option>
+                            <option value="has">Skills You Have</option>
+                            <option value="recommended">High Demand Skills</option>
+                        </select>
+                        <select id="sortJobs">
+                            <option value="relevance">Sort by Relevance</option>
+                            <option value="date">Sort by Date (Newest)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="stats-grid" id="statsGrid"></div>
+                
+                <div class="skills-section">
+                    <h3>📊 Skill Analysis</h3>
+                    <div class="skills-grid" id="skillsGrid"></div>
+                </div>
+
+                <div class="jobs-section">
+                    <h3>💼 Related Job Opportunities</h3>
+                    <div id="jobsContainer"></div>
+                </div>
+
+                <div class="jobs-section">
+                    <h3>📚 Recommended Learning Resources</h3>
+                    <p style="color: #666; margin-bottom: 15px;">Free courses to help you fill your skill gaps</p>
+                    <div id="coursesContainer"></div>
+                </div>
+            </div>
+
+            <div class="api-credit">
+                Powered by <strong>Arbeitnow API</strong> (Job Data) & <strong>Udemy API</strong> (Learning Resources)
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

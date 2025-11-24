@@ -1,0 +1,38 @@
+# API Keys and Secrets (even though we don't use them, good practice)
+*.key
+*.env
+.env.local
+secrets/
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Temporary files
+*.tmp
+*.temp
+.cache/
+
+# Video files (you'll upload demo separately)
+*.mp4
+*.mov
+*.avi
+demo-video.*
+
+# System files
+Thumbs.db
+.DS_Store
+
+# Backup files
+*.bak
+*.backup
